@@ -1,0 +1,18 @@
+<h1>Welcome To Imbibe And Vibe!</h1>
+<h2>There's Song For Every Drink And A Drink For Every Occasion!!<a href="/imbibes/new"></a>Let's Raise A Glass!</h2>
+
+<% if @user_imbibes %>
+<h2>I Don't Always Imbibe, When I Do...It's Also A Vibe! </h2>
+  <ul>
+  <% @user_imbibes.each do |imbibe| %>
+    <li><a href="imbibes/<%=imbibe.id%>"><%= imbibe.vibe %> </a></li>
+  <% end %>
+  </ul>
+<% end %>
+
+<h2>Remember The Good Times!</h2>
+<ul>
+<% @imbibes.each do |imbibe| %>
+  <li><a href="imbibes/<%=imbibe.id%>"><%= imbibe.vibe %> </a></li>
+<% end %>
+</ul>

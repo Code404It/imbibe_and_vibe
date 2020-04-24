@@ -1,0 +1,15 @@
+<h1>Shall We Imbibe?</h1>
+
+<form method="POST" action="/imbibes">
+  <select name="user_id">
+    <% @users.each do |user| %>
+      <option value="<%= user.id%>"> <%= user.name %></option>
+    <% end %>
+  </select><br />
+
+
+
+  What's The Occasion?<input type="text" name="What's The Occasion?"><br />
+  What's In The Glass?<textarea name="What's In The Glass?"></textarea><br />
+  <input type="submit">
+</form>
