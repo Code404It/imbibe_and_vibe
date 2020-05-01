@@ -1,21 +1,21 @@
 class UsersController < ApplicationController
 
     get "/users/signup" do
-      redirect_if_logged_in
-      erb :'/users/signup'
+      
+      erb :'users/signup'
     end
   
     post "/users" do
       
-      @user = User.new(params)
+      @users = User.new(params)
       
-      if @user && @user.save
+      if @users && @users.save
+      
+        session[:user_id] = @users.id
         
-        session[:user_id] = @user.id
-        
-        redirect "/posts"
+        redirect "/imbibes"
       else
-        
+     
         erb :"users/signup"
       end
     end

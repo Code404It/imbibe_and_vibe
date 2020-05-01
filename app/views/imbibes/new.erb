@@ -1,15 +1,18 @@
 <h1>Shall We Imbibe?</h1>
 
 <form method="POST" action="/imbibes">
-  <select name="user_id">
-    <% @users.each do |user| %>
-      <option value="<%= user.id%>"> <%= user.name %></option>
+  
+  <select name="vibe_id">
+   <% @vibes.each do |vibe| %>
+      <option value="<%=vibe.id%>"><%=vibe.artist%>, <%= vibe.song %></option>
     <% end %>
   </select><br />
 
 
-
-  What's The Occasion?<input type="text" name="What's The Occasion?"><br />
-  What's In The Glass?<textarea name="What's In The Glass?"></textarea><br />
+  What's In The Glass?<textarea name="drink"></textarea><br />
+  What's The Occasion?<input type="text" name="toast_headline"><br />
+  Say More!<textarea name="toast_body"></textarea><br />
+  
   <input type="submit">
 </form>
+

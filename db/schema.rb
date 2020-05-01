@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200423191543) do
+ActiveRecord::Schema.define(version: 20200427141123) do
 
   create_table "imbibes", force: :cascade do |t|
     t.integer  "user_id"
-    t.integer  "song_id"
+    t.integer  "vibe_id"
     t.string   "drink"
     t.string   "toast_headline"
     t.text     "toast_body"

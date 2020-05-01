@@ -1,0 +1,14 @@
+<h1><%= @imbibe.vibe.song%></h1>
+<h2><%= @imbibe.vibe.artist%></h2>
+<h2><%= @imbibe.drink%></h2>
+<h2><%= @imbibe.toast_headline%></h2>
+<h2><%= @imbibe.toast_body%></h2>
+
+
+
+<h3><%="Let's Pretend This Never Happend" %></h3>
+
+<form method="POST" action="/imbibes/<%= @imbibe.id %>">
+  <input type="hidden" id="hidden" name="_method" value="delete">
+  <input type="submit" value="delete">
+</form>

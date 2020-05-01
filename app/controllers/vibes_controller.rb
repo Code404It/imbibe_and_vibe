@@ -42,9 +42,9 @@ class VibesController < ApplicationController
     end
   
     delete '/vibes/:id' do
-      @vibe = Vibe.find_by_id(params[:id])
-      if @vibe.user.id == current_user.id
-        @vibe.destroy
+      @vibes = Vibe.find_by_id(params[:id])
+      if @vibes.user.id == current_user.id
+        @vibes.destroy
         redirect "/vibes"
       else
         redirect "/vibes"

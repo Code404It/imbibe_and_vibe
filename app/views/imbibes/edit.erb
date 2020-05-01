@@ -1,10 +1,18 @@
-<h1>Wanna Say It Differently!</h1>
-
-<form method="POST" action="/imbibes/<%= @imbibe.id %>">
+<h1>Don't Like How That Looks?</h1>
+<h2>Change It!</h2>
+  <form method="POST" action="/imbibes/<%= @imbibe.id %>">
   <input type="hidden" id="hidden" name="_method" value="PATCH">
-
-  <select name="user_id">
-    <% @users.each do |user| %>
-      <option value="<%= user.id%>"> <%= user.name %></option>
+  
+  <select name="vibe_id">
+   <% @vibes.each do |vibe| %>
+      <option value="<%=vibe.id%>"><%=vibe.artist%>, <%= vibe.song %></option>
     <% end %>
   </select><br />
+
+
+  What's In The Glass?<textarea name="drink"></textarea><br />
+  What's The Occasion?<input type="text" name="toast_headline"><br />
+  Say More!<textarea name="toast_body"></textarea><br />
+  
+  <input type="submit">
+</form>

@@ -6,7 +6,7 @@ class ApplicationController < Sinatra::Base
     set :public_folder, 'public'
     set :views, 'app/views'
     enable :sessions
-    set :session_secret, "iwannagooutside"
+    set :session_secret, "graduationisjuly24"
   end
 
   get "/" do
@@ -20,7 +20,7 @@ class ApplicationController < Sinatra::Base
     end
 
     def current_user
-      @user ||= User.find(id: session[:user_id])
+      @user ||= User.find_by(id: session[:user_id])
     end
 
     def redirect_if_not_logged_in
