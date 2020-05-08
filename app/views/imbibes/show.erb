@@ -8,6 +8,12 @@
 
 <h3><%="Let's Pretend This Never Happend" %></h3>
 
+
+
+<form method="GET" action='/imbibes/<%= @imbibe.id %>/edit' >
+      <input value="Edit" type="submit" />
+    </form>
+
 <form method="POST" action="/imbibes/<%= @imbibe.id %>">
   <input type="hidden" id="hidden" name="_method" value="delete">
   <input type="submit" value="delete">
